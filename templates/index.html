@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>{{ section.extra.hero_name | default(value="Stefan Lendl") }}</h1>
+                    <p class="hero-title">{{ section.extra.hero_title | default(value="") }}</p>
+                    <p class="hero-subtitle">{{ section.extra.hero_subtitle | default(value="") }}</p>
+                    <div class="hero-buttons">
+                        <a href="{{ section.extra.hero_cta_link | default(value='mailto:stefan@lendl.dev') }}" class="btn btn-primary" target="_blank" rel="noopener">{{ section.extra.hero_cta | default(value="Get in Touch") }}</a>
+                        {% if section.extra.hero_cv_link %}
+                        <a href="{{ section.extra.hero_cv_link }}" class="btn btn-secondary">{{ section.extra.hero_cv | default(value="Download CV") }}</a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% if section.extra.hero_image %}
+                <div class="hero-image">
+                    <img src="{{ get_url(path=section.extra.hero_image) }}" alt="{{ section.extra.hero_name }}">
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    {% if section.extra.expertise %}
+    <section class="section expertise">
+        <div class="container">
+            <h2>{{ section.extra.expertise_title | default(value="Expertise") }}</h2>
+            <p class="section-intro">{{ section.extra.expertise_intro | default(value="") }}</p>
+            <div class="grid">
+                {% for item in section.extra.expertise %}
+                <div class="card">
+                    <span class="card-icon">{{ item.icon }}</span>
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- Services Section -->
+    {% if section.extra.services %}
+    <section class="section services">
+        <div class="container">
+            <h2>{{ section.extra.services_title | default(value="Services") }}</h2>
+            <p class="section-intro">{{ section.extra.services_intro | default(value="") }}</p>
+            <div class="grid">
+                {% for service in section.extra.services %}
+                <div class="card">
+                    <h3>{{ service.title }}</h3>
+                    <p>{{ service.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- Experience Section -->
+    {% if section.extra.experience %}
+    <section class="section experience">
+        <div class="container">
+            <h2>{{ section.extra.experience_title | default(value="Experience") }}</h2>
+            <div class="experience-list">
+                {% for exp in section.extra.experience %}
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>{{ exp.title }}</h3>
+                        <span class="experience-period">{{ exp.period }}</span>
+                    </div>
+                    <p class="experience-company">{{ exp.company }}</p>
+                    <p>{{ exp.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- Contact Section -->
+    <section class="section contact">
+        <div class="container">
+            <h2>{{ section.extra.contact_title | default(value="Contact") }}</h2>
+            <p class="section-intro">{{ section.extra.contact_intro | default(value="") }}</p>
+            <div class="contact-info">
+                <a href="mailto:{{ section.extra.contact_email | default(value='stefan@lendl.dev') }}" class="btn btn-primary" target="_blank" rel="noopener">{{ section.extra.contact_email | default(value="stefan@lendl.dev") }}</a>
+                <p class="contact-location">{{ section.extra.contact_location | default(value="") }}</p>
+                <p class="contact-availability">{{ section.extra.contact_availability | default(value="") }}</p>
+                <div class="contact-links">
+                    {% if section.extra.contact_github %}
+                    <a href="{{ section.extra.contact_github }}" target="_blank" rel="noopener">GitHub</a>
+                    {% endif %}
+                    {% if section.extra.contact_linkedin %}
+                    <a href="{{ section.extra.contact_linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

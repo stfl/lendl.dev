@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} - {{ config.title }}{% endblock %}
+{% block description %}{{ page.description | default(value=config.description) }}{% endblock %}
+
+{% block content %}
+<main>
+    <section class="section page-content">
+        <div class="container container-narrow">
+            <nav class="page-nav">
+                <a href="{{ get_url(path='/') }}">&larr; Back</a>
+            </nav>
+            <h1>{{ page.title }}</h1>
+            <div class="prose">
+                {{ page.content | safe }}
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

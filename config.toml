@@ -1,0 +1,20 @@
+base_url = "https://lendl.dev"
+title = "Stefan Lendl - Embedded Rust & Systems Engineering"
+description = "Freelance software engineering services specializing in embedded Rust, embedded Linux, and systems architecture."
+default_language = "en"
+
+compile_sass = true
+minify_html = true
+build_search_index = false
+generate_feeds = false
+
+[markdown]
+highlight_code = true
+highlight_theme = "base16-ocean-dark"
+
+[extra]
+author = "Stefan Lendl"
+email = "stefan@lendl.dev"
+github = "https://github.com/stfl"
+linkedin = "https://linkedin.com/in/stfl"
+location = "Vienna, Austria"
