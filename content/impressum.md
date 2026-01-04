@@ -6,13 +6,15 @@ template = "page.html"
 
 ## Angaben gemäß § 5 ECG
 
-**Stefan Lendl**
+**Stefan Lendl** \
 Software Engineering Services
 
-<!-- TODO: Add address -->
-Wien, Österreich
+Jurekgasse 25/30 \
+1150 Wien \
+Österreich \
+ATU81467636
 
-**Kontakt**
+**Kontakt** \
 E-Mail: stefan@lendl.dev
 
 ## Haftungsausschluss
