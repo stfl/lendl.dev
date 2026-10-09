@@ -14,7 +14,7 @@ expertise_title = "Core Expertise"
 expertise_intro = "Bringing modern Rust to embedded systems where reliability matters."
 
 services_title = "Services"
-services_intro = "From architecture to production deployment"
+services_intro = "Judgment first, then the hands-on work to carry it through"
 
 experience_title = "Experience"
 
@@ -69,7 +69,7 @@ link = "https://github.com/stfl/mcap-cli-flake"
 [[extra.expertise]]
 icon = "🦀"
 title = "Embedded Rust"
-description = "Modern, safe systems programming for embedded platforms. Production experience at ÖBB and TTTech."
+description = "Modern, safe systems programming for embedded platforms. Production experience at ÖBB, Momentedge and Proxmox."
 
 [[extra.expertise]]
 icon = "🐧"
@@ -87,20 +87,20 @@ title = "Software Architecture"
 description = "System design, technical due diligence, and modular framework development."
 
 [[extra.services]]
-title = "Embedded Rust Development"
-description = "Implement new features or transition existing C/C++ codebases to safe, modern Rust."
+title = "Rust Consulting & Engineering"
+description = "Senior Rust for teams that run it in production or are about to: architecture, code review, mentoring, and hands-on delivery of the hard part. Embedded targets, Linux services, CLIs and protocol code."
 
 [[extra.services]]
-title = "Embedded Linux Solutions"
-description = "Custom Yocto distributions, driver development, system integration, and optimization."
-
-[[extra.services]]
-title = "Architecture Consulting"
-description = "System design review, technical due diligence, and architecture planning for embedded projects."
+title = "Embedded Linux & Device Platforms"
+description = "Yocto distributions and BSPs, signed A/B OTA updates, PKI and code signing, device management, and services that survive bad networks: atomic state, no data loss, provable completeness."
 
 [[extra.services]]
 title = "Agent-Ready Tooling"
 description = "CLIs and MCP servers an AI agent can drive without breaking things: typed clients from your OpenAPI spec, every write a dry run until --commit, one JSON envelope, honest exit codes."
+
+[[extra.services]]
+title = "Technical Due Diligence & Architecture Review"
+description = "Independent assessment of a codebase, platform or vendor product before you commit to it: supportability, risk, migration paths, and the requirements work to get stakeholders to one spec."
 
 [[extra.experience]]
 title = "Senior Rust Engineer (Contract)"
@@ -109,16 +109,16 @@ description = "Momentedge Clipper (see Selected Work), with GitHub Actions relea
 period = "May 2026 – present"
 
 [[extra.experience]]
-title = "Technical Due Diligence (Contract)"
-company = "Origina"
-description = "Assessed Proxmox VE and Proxmox Backup Server for Origina's catalogue of independently supported enterprise software, mapping every functional area to what is supportable without vendor access and flagging the setups that pose a risk."
-period = "Feb 2026 – Jun 2026"
-
-[[extra.experience]]
 title = "Senior Software Engineer (Contract)"
 company = "ÖBB (Austrian Federal Railways)"
 description = "Railway edge devices (see Selected Work), plus a Rust MQTT agent for ThingsBoard device management and requirements engineering with ÖBB stakeholders."
 period = "Oct 2024 – present"
+
+[[extra.experience]]
+title = "Technical Due Diligence (Contract)"
+company = "Origina"
+description = "Assessed Proxmox VE and Proxmox Backup Server for Origina's catalogue of independently supported enterprise software, mapping every functional area to what is supportable without vendor access and flagging the setups that pose a risk."
+period = "Feb 2026 – Jun 2026"
 
 [[extra.experience]]
 title = "Embedded Software Architect & Technical Lead"
