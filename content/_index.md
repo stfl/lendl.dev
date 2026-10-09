@@ -60,11 +60,11 @@ tags = ["MCP", "Emacs Lisp", "AI agents"]
 link = "https://github.com/stfl/org-records-mcp"
 
 [[extra.work]]
-title = "mcap-cli for Nix"
-client = "Open source"
-description = "The Rust rewrite of Foxglove's MCAP command-line tool, packaged in nixpkgs house style with its 338 upstream tests running in the build, and the nixpkgs pull request that adopts it."
-tags = ["Nix", "Rust", "MCAP"]
-link = "https://github.com/stfl/mcap-cli-flake"
+title = "Proxmox Backup Server & OpenZFS"
+client = "Proxmox"
+description = "Backend features for Proxmox Backup Server in Rust with their ExtJS frontend, a kernel-module bug traced through ZFS mount handling and fixed upstream in OpenZFS, and Tier-3 enterprise support incidents across storage, networking and virtualization."
+tags = ["Rust", "ZFS", "Proxmox", "Enterprise support"]
+link = "https://github.com/openzfs/zfs/pull/15660"
 
 [[extra.expertise]]
 icon = "🦀"
