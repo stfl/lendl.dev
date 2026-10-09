@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Page not found - {{ config.author }}{% endblock %}
+
+{% block content %}
+<main>
+    <section class="section page-content">
+        <div class="container container-narrow">
+            <h1>Page not found</h1>
+            <p><a href="{{ get_url(path='/') }}">&larr; Home</a></p>
+        </div>
+    </section>
+</main>
+{% endblock %}

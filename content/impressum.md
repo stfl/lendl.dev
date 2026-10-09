@@ -1,7 +1,9 @@
 +++
 title = "Impressum"
 description = "Impressum und rechtliche Informationen"
-template = "page.html"
+
+[extra]
+lang = "de"
 +++
 
 ## Angaben gemäß § 5 ECG

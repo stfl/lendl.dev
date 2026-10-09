@@ -1,23 +1,12 @@
 <!DOCTYPE html>
-<html lang="{{ lang }}">
+<html lang="{% block lang %}{{ lang }}{% endblock %}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{{ config.title }}{% endblock %}</title>
     <meta name="description" content="{% block description %}{{ config.description }}{% endblock %}">
-    <meta name="author" content="{{ config.extra.author }}">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="{% block og_title %}{{ config.title }}{% endblock %}">
-    <meta property="og:description" content="{% block og_description %}{{ config.description }}{% endblock %}">
-    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
-    <meta property="og:url" content="{% block og_url %}{{ config.base_url }}{% endblock %}">
-    {% block head %}{% endblock %}
-
-    <!-- Twitter falls back to the Open Graph title and description -->
-    <meta name="twitter:card" content="summary">
-
-    <link rel="alternate" type="application/atom+xml" title="{{ config.extra.author }} - Blog" href="{{ get_url(path='blog/atom.xml', trailing_slash=false) }}">
+    <meta name="author" content="{{ config.author }}">
+    <link rel="alternate" type="application/atom+xml" title="{{ config.author }} - Blog" href="{{ get_url(path='blog/atom.xml', trailing_slash=false) }}">
     <link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) }}">
 </head>
 <body>
@@ -26,7 +15,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; {{ now() | date(format="%Y") }} {{ config.extra.author }}</p>
+                <p>&copy; {{ now() | date(format="%Y") }} {{ config.author }}</p>
                 <nav class="footer-nav">
                     <a href="{{ get_url(path='@/blog/_index.md') }}">Blog</a>
                     <a href="{{ get_url(path='@/impressum.md') }}">Impressum</a>

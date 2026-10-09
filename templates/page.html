@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
-{% block title %}{{ page.title }} - {{ config.title }}{% endblock %}
-{% block description %}{{ page.description | default(value=config.description) }}{% endblock %}
+{% block lang %}{{ page.extra.lang | default(value=lang) }}{% endblock %}
+{% block title %}{{ page.title }} - {{ config.author }}{% endblock %}
+{% block description %}{{ page.description }}{% endblock %}
 
 {% block content %}
 <main>

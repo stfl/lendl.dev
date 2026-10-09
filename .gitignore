@@ -1,15 +1,2 @@
-# Zola
 public/
-.sass-cache/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Editor
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
 /.claude/

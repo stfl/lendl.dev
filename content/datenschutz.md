@@ -1,7 +1,9 @@
 +++
 title = "Datenschutzerklärung"
 description = "Datenschutzerklärung und DSGVO-Informationen"
-template = "page.html"
+
+[extra]
+lang = "de"
 +++
 
 ## 1. Datenschutz auf einen Blick

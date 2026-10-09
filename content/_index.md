@@ -1,41 +1,25 @@
 +++
-title = "Stefan Lendl - Embedded Rust & Systems Engineering"
-description = "Freelance software engineering services specializing in embedded Rust, embedded Linux, and systems architecture."
-template = "index.html"
-
 [extra]
-# Hero Section
-hero_name = "Stefan Lendl"
 hero_title = "Embedded Rust & Systems Engineering"
 hero_subtitle = "14+ years delivering production software for railway, automotive, and industrial systems"
 hero_cta = "Get in Touch"
-hero_cta_link = "mailto:stefan@lendl.dev"
 hero_cv = "Download CV"
 hero_cv_link = "https://github.com/stfl/cv/releases/latest/download/Stefan-Lendl-CV.pdf"
-hero_image = "avatar.jpg"
 
-# Expertise Section
 expertise_title = "Core Expertise"
 expertise_intro = "Bringing modern Rust to embedded systems where reliability matters."
 
-# Services Section
 services_title = "Services"
 services_intro = "From architecture to production deployment"
 
-# Experience Section
 experience_title = "Experience"
 
-# Contact Section
 contact_title = "Let's Work Together"
 contact_intro = "Whether you're building new embedded systems or modernizing existing platforms, I can help."
-contact_email = "stefan@lendl.dev"
 contact_location = "Vienna, Austria"
 contact_availability = "Available in Vienna, partial travel, remote worldwide"
 contact_github = "https://github.com/stfl"
 contact_linkedin = "https://linkedin.com/in/stfl"
-
-# Footer
-footer_copyright = "Stefan Lendl"
 
 # Arrays must come after all scalar fields
 [[extra.expertise]]
