@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{{ config.title }}{% endblock %}</title>
-    <meta name="description" content="{% block description %}{{ config.description }}{% endblock %}">
+    {%- if page %}
+    {%- set meta_title = page.title ~ " - " ~ config.author %}
+    {%- set meta_description = page.description | default(value=config.description) %}
+    {%- elif section and section.title %}
+    {%- set meta_title = section.title ~ " - " ~ config.author %}
+    {%- set meta_description = section.description | default(value=config.description) %}
+    {%- else %}
+    {%- set meta_title = config.title %}
+    {%- set meta_description = config.description %}
+    {%- endif %}
+    <title>{% block title %}{{ meta_title }}{% endblock %}</title>
+    <meta name="description" content="{{ meta_description }}">
     <meta name="author" content="{{ config.author }}">
+    {% if page or section %}
+    <meta property="og:type" content="{% if page %}article{% else %}website{% endif %}">
+    <meta property="og:site_name" content="{{ config.author }}">
+    <meta property="og:title" content="{{ meta_title }}">
+    <meta property="og:description" content="{{ meta_description }}">
+    {% if current_url %}<meta property="og:url" content="{{ current_url }}">{% endif %}
+    <meta property="og:image" content="{{ get_url(path='avatar.jpg') }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ meta_title }}">
+    <meta name="twitter:description" content="{{ meta_description }}">
+    {% endif %}
     <link rel="alternate" type="application/atom+xml" title="{{ config.author }} - Blog" href="{{ get_url(path='blog/atom.xml', trailing_slash=false) }}">
     <link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) }}">
 </head>

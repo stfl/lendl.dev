@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 
 {% block lang %}{{ page.extra.lang | default(value=lang) }}{% endblock %}
-{% block title %}{{ page.title }} - {{ config.author }}{% endblock %}
-{% block description %}{{ page.description }}{% endblock %}
 
 {% block content %}
 <main>

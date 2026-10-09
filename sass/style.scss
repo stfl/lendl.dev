@@ -186,6 +186,11 @@ a {
     font-size: 1.125rem;
     color: $text-secondary;
     margin-bottom: 2rem;
+    max-width: 34em;
+
+    @media (max-width: $desktop) {
+        margin-inline: auto;
+    }
 }
 
 .hero-buttons {
@@ -248,6 +253,65 @@ a {
     color: $text-secondary;
     margin-bottom: 0;
     font-size: 0.95rem;
+}
+
+// Selected work
+.work-card {
+    display: flex;
+    flex-direction: column;
+
+    h3 a {
+        color: $text-primary;
+
+        // Touch screens have no hover, so a linked title carries a visible mark
+        &::after {
+            content: " \2197";
+            color: $text-secondary;
+            font-size: 0.8em;
+        }
+
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    > p:last-of-type {
+        flex: 1;
+    }
+}
+
+.work-card .work-client {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: $accent;
+    margin-bottom: 0.5rem;
+}
+
+.work-tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+
+    li {
+        font-family: $font-mono;
+        font-size: 0.75rem;
+        color: $text-secondary;
+        background: $bg-secondary;
+        border: 1px solid $border;
+        border-radius: 4px;
+        padding: 0.15rem 0.5rem;
+    }
+}
+
+.work-upstream {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: $text-secondary;
 }
 
 // Experience

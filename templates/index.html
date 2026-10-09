@@ -21,6 +21,26 @@
         </div>
     </section>
 
+    <section class="section work">
+        <div class="container">
+            <h2>{{ section.extra.work_title }}</h2>
+            <p class="section-intro">{{ section.extra.work_intro }}</p>
+            <div class="grid">
+                {% for item in section.extra.work %}
+                <article class="card work-card">
+                    <p class="work-client">{{ item.client }}</p>
+                    <h3>{% if item.link %}<a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h3>
+                    <p>{{ item.description }}{% if item.cta %} <a href="mailto:{{ config.extra.email }}">{{ item.cta }}</a>.{% endif %}</p>
+                    <ul class="work-tags">
+                        {% for tag in item.tags %}<li>{{ tag }}</li>{% endfor %}
+                    </ul>
+                </article>
+                {% endfor %}
+            </div>
+            <p class="work-upstream">{{ section.extra.work_upstream }}</p>
+        </div>
+    </section>
+
     <section class="section expertise">
         <div class="container">
             <h2>{{ section.extra.expertise_title }}</h2>

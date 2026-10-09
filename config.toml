@@ -1,6 +1,6 @@
 base_url = "https://lendl.dev"
 title = "Stefan Lendl - Embedded Rust & Systems Engineering"
-description = "Freelance software engineering services specializing in embedded Rust, embedded Linux, and systems architecture."
+description = "Freelance engineer in Vienna: production Rust for embedded Linux devices, and the CLIs, MCP servers and AI agents that operate them."
 author = "Stefan Lendl"
 
 compile_sass = true

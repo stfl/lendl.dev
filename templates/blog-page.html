@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 
-{% block title %}{{ page.title }} - {{ config.author }}{% endblock %}
-{% block description %}{{ page.description }}{% endblock %}
 
 {% block content %}
 <main>
@@ -14,6 +12,7 @@
                 <h1>{{ page.title }}</h1>
                 <p class="post-meta">
                     <time datetime="{{ page.date }}">{{ page.date | date(format="%-d %B %Y") }}</time>
+                    {% if page.updated %}&middot; updated <time datetime="{{ page.updated }}">{{ page.updated | date(format="%-d %B %Y") }}</time>{% endif %}
                     &middot; {{ page.reading_time }} min read
                 </p>
             </header>

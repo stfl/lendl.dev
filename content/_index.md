@@ -1,10 +1,14 @@
 +++
 [extra]
 hero_title = "Embedded Rust & Systems Engineering"
-hero_subtitle = "14+ years delivering production software for railway, automotive, and industrial systems"
+hero_subtitle = "Production Rust for devices in the field, and the CLIs, MCP servers and agents that operate them. 14 years from Yocto BSPs to railway OTA."
 hero_cta = "Get in Touch"
 hero_cv = "Download CV"
 hero_cv_link = "https://github.com/stfl/cv/releases/latest/download/Stefan-Lendl-CV.pdf"
+
+work_title = "Selected Work"
+work_intro = "Shipped systems and open source, with the numbers that matter."
+work_upstream = "Upstream contributions: OpenZFS, nixpkgs, meta‑rust, mcp‑server‑lib.el, copilot.el."
 
 expertise_title = "Core Expertise"
 expertise_intro = "Bringing modern Rust to embedded systems where reliability matters."
@@ -22,6 +26,46 @@ contact_github = "https://github.com/stfl"
 contact_linkedin = "https://linkedin.com/in/stfl"
 
 # Arrays must come after all scalar fields
+[[extra.work]]
+title = "Momentedge Clipper"
+client = "Momentedge"
+description = "Cuts event-triggered clips from a live ROS 2 MCAP recording while it is still being written. Reads the file only and never touches the recorder: 0.45 % of one core and 22 MiB on a Jetson Orin Nano."
+tags = ["Rust", "ROS 2", "MCAP", "Jetson"]
+
+[[extra.work]]
+title = "Railway edge devices"
+client = "ÖBB"
+description = "Yocto LTS migration with an in-field upgrade path, signed A/B OTA updates with RAUC on ÖBB's PKI, and a Rust service that exports InfluxDB 3 measurements as Parquet over an unreliable link with zero data loss and a gapless completeness report."
+tags = ["Rust", "Yocto", "RAUC", "PKI"]
+
+[[extra.work]]
+title = "sevDesk bookkeeping agent"
+client = "Product in development"
+description = "An AI agent that keeps a company's books through sevDesk. Its Rust CLI covers 327 API operations, 173 of them undocumented, rehearses every write as a dry run and demands a second flag before anything irreversible."
+tags = ["Rust", "AI agents", "sevDesk"]
+cta = "Want an AI bookkeeper for your sevDesk account? Talk to me"
+
+[[extra.work]]
+title = "typed-openapi"
+client = "Open source"
+description = "A typed Rust client and a clap command tree generated from one OpenAPI document. Every write prints the exact request and stops until --commit. Built for CLIs that an AI agent drives."
+tags = ["Rust", "OpenAPI", "Code generation"]
+link = "https://github.com/stfl/typed-openapi"
+
+[[extra.work]]
+title = "org-records-mcp"
+client = "Open source"
+description = "Turns a running Emacs into an MCP server over Org files: 34 tools, org-ql queries, records instead of text. In daily use with Claude Code."
+tags = ["MCP", "Emacs Lisp", "AI agents"]
+link = "https://github.com/stfl/org-records-mcp"
+
+[[extra.work]]
+title = "mcap-cli for Nix"
+client = "Open source"
+description = "The Rust rewrite of Foxglove's MCAP command-line tool, packaged in nixpkgs house style with its 338 upstream tests running in the build, and the nixpkgs pull request that adopts it."
+tags = ["Nix", "Rust", "MCAP"]
+link = "https://github.com/stfl/mcap-cli-flake"
+
 [[extra.expertise]]
 icon = "🦀"
 title = "Embedded Rust"
@@ -33,9 +77,9 @@ title = "Embedded Linux"
 description = "Custom Yocto/OpenEmbedded distributions, real-time kernel configuration, BSP development."
 
 [[extra.expertise]]
-icon = "⚡"
-title = "Real-Time Systems"
-description = "Low-latency computing with deterministic performance for time-critical applications."
+icon = "🤖"
+title = "AI Agents in Production"
+description = "Agents that keep books, cut video and manage task systems, built on tools that refuse the irreversible by default."
 
 [[extra.expertise]]
 icon = "🏗️"
@@ -55,25 +99,25 @@ title = "Architecture Consulting"
 description = "System design review, technical due diligence, and architecture planning for embedded projects."
 
 [[extra.services]]
-title = "DevOps & Infrastructure"
-description = "NixOS-based reproducible builds, CI/CD pipelines, and development environment setup."
+title = "Agent-Ready Tooling"
+description = "CLIs and MCP servers an AI agent can drive without breaking things: typed clients from your OpenAPI spec, every write a dry run until --commit, one JSON envelope, honest exit codes."
 
 [[extra.experience]]
 title = "Senior Rust Engineer (Contract)"
 company = "Momentedge"
-description = "Rust tool that cuts event-triggered clips from a live ROS 2 MCAP recording on a Jetson Orin, tailing the file while it is still being written."
+description = "Momentedge Clipper (see Selected Work), with GitHub Actions releasing arm64 Debian packages for ROS 2 Humble and Jazzy."
 period = "May 2026 – present"
 
 [[extra.experience]]
-title = "Support Engineer (Contract)"
+title = "Technical Due Diligence (Contract)"
 company = "Origina"
-description = "Assessed Proxmox VE and Proxmox Backup Server for third-party enterprise support and flagged the setups that pose a supportability risk."
+description = "Assessed Proxmox VE and Proxmox Backup Server for Origina's catalogue of independently supported enterprise software, mapping every functional area to what is supportable without vendor access and flagging the setups that pose a risk."
 period = "Feb 2026 – Jun 2026"
 
 [[extra.experience]]
 title = "Senior Software Engineer (Contract)"
 company = "ÖBB (Austrian Federal Railways)"
-description = "Yocto Scarthgap migration of railway edge devices, signed A/B OTA updates with RAUC, and Rust services for measurement export and device management."
+description = "Railway edge devices (see Selected Work), plus a Rust MQTT agent for ThingsBoard device management and requirements engineering with ÖBB stakeholders."
 period = "Oct 2024 – present"
 
 [[extra.experience]]
