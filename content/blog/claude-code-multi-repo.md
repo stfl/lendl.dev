@@ -2,7 +2,6 @@
 title = "Multi-repo Claude Code: let each repository brief its own agent"
 description = "Claude Code reads a repository's CLAUDE.md, rules, skills and hooks only when the session starts there. Instead of stretching one session across repositories, hand each change to a background session that lives in the repository it changes."
 date = 2026-10-09
-draft = true
 +++
 
 Most of my sessions touch more than one repository. An agent project needs a

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }} - {{ config.title }}{% endblock %}
+{% block description %}{{ section.description | default(value=config.description) }}{% endblock %}
+{% block og_title %}{{ section.title }} - {{ config.extra.author }}{% endblock %}
+{% block og_description %}{{ section.description | default(value=config.description) }}{% endblock %}
+{% block og_url %}{{ section.permalink }}{% endblock %}
+
+{% block content %}
+<main>
+    <section class="section page-content">
+        <div class="container container-narrow">
+            <nav class="page-nav">
+                <a href="{{ get_url(path='/') }}">&larr; Home</a>
+            </nav>
+            <h1>{{ section.title }}</h1>
+            {% if section.description %}
+            <p class="section-intro">{{ section.description }}</p>
+            {% endif %}
+            {{ <post_list pages={section.pages} heading="h2" /> }}
+            <p class="feed-link">
+                <a href="{{ get_url(path='blog/atom.xml', trailing_slash=false) }}">Atom feed</a>
+            </p>
+        </div>
+    </section>
+</main>
+{% endblock %}

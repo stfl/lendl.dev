@@ -84,6 +84,19 @@
     </section>
     {% endif %}
 
+    <!-- Blog Section -->
+    {% set blog_section = get_section(path="blog/_index.md") %}
+    {% if blog_section.pages %}
+    <section class="section blog-preview">
+        <div class="container">
+            <h2>{{ section.extra.blog_title | default(value=blog_section.title) }}</h2>
+            <p class="section-intro">{{ blog_section.description }}</p>
+            {{ <post_list pages={blog_section.pages[:3]} heading="h3" /> }}
+            <a href="{{ blog_section.permalink }}" class="btn btn-secondary blog-more">All posts</a>
+        </div>
+    </section>
+    {% endif %}
+
     <!-- Contact Section -->
     <section class="section contact">
         <div class="container">
