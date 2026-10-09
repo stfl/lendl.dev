@@ -152,6 +152,22 @@ persists. A plain file already in the way is handed to
 `home-manager.backupCommand`, which moves it out of the tree rather than
 leaving a `.bak` sibling that Claude Code would scan as a duplicate.
 
+The same one-hop link can be declared without a line of bash, through
+systemd's user tmpfiles:
+
+```nix
+systemd.user.tmpfiles.rules = [
+  "L+ %h/.claude/settings.json - - - - ${checkoutPath config ../../config/claude/settings.json}"
+];
+```
+
+home-manager writes the rule to `~/.config/user-tmpfiles.d/`, runs
+`systemd-tmpfiles --user --create` when it changes, and enables
+`systemd-tmpfiles-setup.service`, so the link is re-applied at every login as
+well. The trade is in the `+`: `L+` removes whatever is in the way, a plain
+file included, where the activation script backs it up first. Both leave the
+link behind when the declaration goes.
+
 ## The formatter has to know
 
 The declared set is read back at the flake level and fed to treefmt as its
@@ -160,7 +176,7 @@ exclude list:
 ```nix
 backlinkGlobs = myLib.backlink.globs (map
   (host: inputs.self.nixosConfigurations.${host}.config.home-manager.users.${USER}.backlinks)
-  ["kondor" "pirol"]);
+  ["laptop" "workstation"]);
 ```
 
 Declaring a backlink is what stops `nix fmt` from reformatting a file a
@@ -170,20 +186,29 @@ repo: the formatter would not know to skip the file.
 
 ## End to end with Claude Code
 
-I ask Claude Code to deny an MCP connector in every session. It edits
-`config/claude/settings.json` in the dotfiles checkout, because its Edit tool
-refuses to write through a symlink and a skill in the repo tells it that the
-repo path is the one to edit. The same bytes are what `~/.claude/settings.json`
-resolves to, so the running session sees them. `git -C ~/.config/dotfiles
-diff` shows the change:
+Claude Code ships a setup wizard for auto mode. It interviews you about the
+environment it runs in and writes the answers into `settings.json` itself,
+through whatever `~/.claude/settings.json` resolves to. With the one-hop link
+that is the file in the dotfiles checkout, and `git -C ~/.config/dotfiles
+diff` shows what the wizard decided:
 
 ```diff
-+  "deniedMcpServers": [
-+    {
-+      "serverName": "claude.ai Gmail"
-+    }
-+  ],
++  "autoMode": {
++    "environment": [
++      "### Org-wide",
++      "**Primary use of Claude Code**: software development",
++      "**Secrets management**: .env (gitignored, never committed) …",
 ```
+
+The same path serves `/config`, an "always allow" answer to a permission
+prompt, and a plugin install. Nothing in the tool knows about Nix; it writes
+its own config file the way it does on any machine, and the file happens to be
+in a git repository.
+
+When I ask the agent to change a setting, it edits the checkout path directly
+instead: a skill in the repo tells it that `config/claude/settings.json` is the
+source and `~/.claude/settings.json` the link. Either way the diff lands in
+the same place.
 
 I read it, commit it with a message that says why, and push. On the laptop,
 `git pull` is the deployment: the link already points at the checkout, so the
