@@ -74,7 +74,7 @@ description = "Modern, safe systems programming for embedded platforms. Producti
 [[extra.expertise]]
 icon = "🐧"
 title = "Embedded Linux"
-description = "Custom Yocto/OpenEmbedded distributions, real-time kernel configuration, BSP development."
+description = "Yocto/OpenEmbedded distributions for devices and NixOS for everything else: kernel configuration, BSP development, reproducible builds."
 
 [[extra.expertise]]
 icon = "🤖"
@@ -84,23 +84,23 @@ description = "Agents that keep books, cut video and manage task systems, built 
 [[extra.expertise]]
 icon = "🏗️"
 title = "Software Architecture"
-description = "System design, technical due diligence, and modular framework development."
+description = "System design, requirements engineering, and modular framework development."
 
 [[extra.services]]
 title = "Rust Consulting & Engineering"
 description = "Senior Rust for teams that run it in production or are about to: architecture, code review, mentoring, and hands-on delivery of the hard part. Embedded targets, Linux services, CLIs and protocol code."
 
 [[extra.services]]
-title = "Embedded Linux & Device Platforms"
-description = "Yocto distributions and BSPs, signed A/B OTA updates, PKI and code signing, device management, and services that survive bad networks: atomic state, no data loss, provable completeness."
+title = "Custom Linux with Yocto and NixOS"
+description = "Yocto and OpenEmbedded distributions for devices, NixOS for servers and workstations: BSPs, kernel and driver work, signed A/B OTA updates with RAUC, PKI and code signing, device management."
 
 [[extra.services]]
 title = "Agent-Ready Tooling"
 description = "CLIs and MCP servers an AI agent can drive without breaking things: typed clients from your OpenAPI spec, every write a dry run until --commit, one JSON envelope, honest exit codes."
 
 [[extra.services]]
-title = "Technical Due Diligence & Architecture Review"
-description = "Independent assessment of a codebase, platform or vendor product before you commit to it: supportability, risk, migration paths, and the requirements work to get stakeholders to one spec."
+title = "Infrastructure & Reproducible Builds"
+description = "NixOS hosts and development environments, Proxmox VE and Backup Server, CI/CD pipelines, and builds that produce the same artifact on a laptop, in CI and on the device."
 
 [[extra.experience]]
 title = "Senior Rust Engineer (Contract)"
@@ -115,7 +115,7 @@ description = "Railway edge devices (see Selected Work), plus a Rust MQTT agent 
 period = "Oct 2024 – present"
 
 [[extra.experience]]
-title = "Technical Due Diligence (Contract)"
+title = "Support Engineer (Contract)"
 company = "Origina"
 description = "Assessed Proxmox VE and Proxmox Backup Server for Origina's catalogue of independently supported enterprise software, mapping every functional area to what is supportable without vendor access and flagging the setups that pose a risk."
 period = "Feb 2026 – Jun 2026"
