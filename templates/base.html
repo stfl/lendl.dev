@@ -18,7 +18,7 @@
     <meta name="twitter:card" content="summary">
 
     <link rel="alternate" type="application/atom+xml" title="{{ config.extra.author }} - Blog" href="{{ get_url(path='blog/atom.xml', trailing_slash=false) }}">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) }}">
 </head>
 <body>
     {% block content %}{% endblock %}
