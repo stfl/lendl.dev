@@ -401,6 +401,7 @@ a {
         padding: 0.2em 0.4em;
         border-radius: 3px;
         font-size: 0.9em;
+        overflow-wrap: break-word;
     }
 
     pre {
@@ -438,13 +439,22 @@ a {
         margin: 2rem 0;
     }
 
-    // Block display lets a wide table scroll instead of widening the page
     table {
-        display: block;
-        overflow-x: auto;
+        width: 100%;
         border-collapse: collapse;
         margin-bottom: 1.5rem;
         font-size: 0.9rem;
+
+        // Narrow screens: keep cells unwrapped and scroll sideways, edge to edge
+        @media (max-width: $tablet) {
+            display: block;
+            overflow-x: auto;
+            width: auto;
+            margin-left: -1.5rem;
+            margin-right: -1.5rem;
+            padding: 0 1.5rem;
+            white-space: nowrap;
+        }
     }
 
     th, td {
