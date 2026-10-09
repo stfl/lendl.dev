@@ -2,10 +2,6 @@
 public/
 .sass-cache/
 
-# Nix
-result
-.direnv/
-
 # OS
 .DS_Store
 Thumbs.db

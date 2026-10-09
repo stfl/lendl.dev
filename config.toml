@@ -8,10 +8,6 @@ minify_html = true
 build_search_index = false
 generate_feeds = false
 
-[markdown]
-highlight_code = true
-highlight_theme = "base16-ocean-dark"
-
 [extra]
 author = "Stefan Lendl"
 email = "stefan@lendl.dev"
