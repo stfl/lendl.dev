@@ -75,20 +75,50 @@ title = "DevOps & Infrastructure"
 description = "NixOS-based reproducible builds, CI/CD pipelines, and development environment setup."
 
 [[extra.experience]]
-title = "Senior Software Engineer"
-company = "ÖBB (Austrian Railways)"
-description = "Embedded Linux and Rust services for mission-critical railway control systems."
-period = "Current"
+title = "Senior Rust Engineer (Contract)"
+company = "Momentedge"
+description = "Rust tool that cuts event-triggered clips from a live ROS 2 MCAP recording on a Jetson Orin, tailing the file while it is still being written."
+period = "May 2026 – present"
 
 [[extra.experience]]
-title = "Embedded Software Architect"
-company = "3DataX / TTTech"
-description = "Cloud-to-vehicle automotive infrastructure with custom Yocto-based Linux."
-period = "Current"
+title = "Support Engineer (Contract)"
+company = "Origina"
+description = "Assessed Proxmox VE and Proxmox Backup Server for third-party enterprise support and flagged the setups that pose a supportability risk."
+period = "Feb 2026 – Jun 2026"
 
 [[extra.experience]]
-title = "Rust Vienna Meetup"
-company = "Organizer"
+title = "Senior Software Engineer (Contract)"
+company = "ÖBB (Austrian Federal Railways)"
+description = "Yocto Scarthgap migration of railway edge devices, signed A/B OTA updates with RAUC, and Rust services for measurement export and device management."
+period = "Oct 2024 – present"
+
+[[extra.experience]]
+title = "Embedded Software Architect & Technical Lead"
+company = "3DataX (Client: TTTech)"
+description = "Led the team and architected the C++ protocol bridging cloud commands to the vehicle bus on a custom Yocto Linux."
+period = "May 2024 – Dec 2024"
+
+[[extra.experience]]
+title = "Software Engineer"
+company = "Proxmox"
+description = "Upstreamed an OpenZFS kernel module fix, built Proxmox Backup Server features in Rust, and resolved Tier-3 enterprise support incidents."
+period = "Sep 2023 – Apr 2024"
+
+[[extra.experience]]
+title = "Software Engineer & Architect"
+company = "pulswerk"
+description = "Built a Django application from scratch and introduced Git and CI/CD; maintains and operates it under a freelance contract since 2022."
+period = "Nov 2019 – present"
+
+[[extra.experience]]
+title = "Embedded Software Engineer"
+company = "Mission Embedded"
+description = "Yocto BSPs for i.MX, low-latency GStreamer pipelines for i.MX and Jetson, board bring-up, and a Rust configuration API."
+period = "Oct 2014 – Oct 2019"
+
+[[extra.experience]]
+title = "Community Lead & Organizer"
+company = "Rust Vienna Meetup"
 description = "Grew Vienna's Rust community from 200 to 500+ members."
-period = "2023-2024"
+period = "Feb 2023 – Jun 2024"
 +++
