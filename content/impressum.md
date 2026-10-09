@@ -11,7 +11,7 @@ lang = "de"
 **Stefan Lendl** \
 Software Engineering Services
 
-Jurekgasse 25/30 \
+Zinckgasse 11/34 \
 1150 Wien \
 Österreich \
 ATU81467636
